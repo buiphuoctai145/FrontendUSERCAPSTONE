@@ -424,12 +424,12 @@
 /*-- endpopover --*/
 [class*="ldpage-technology01-"] {
   margin-bottom: 0px;
-  padding-bottom: 80px; }
+  padding-bottom: 20px; }
 
 @media (max-width: 767px) {
   [class*="ldpage-technology01-"] {
     margin-bottom: 0px;
-    padding-bottom: 40px; } }
+    padding-bottom: 10px; } }
 
 .layoutPage-technology-01 {
   background: var(--technology01-color-bg); }
