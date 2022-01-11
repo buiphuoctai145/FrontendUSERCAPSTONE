@@ -142,7 +142,7 @@
 	}
 }
 
-</style><style>@-webkit-keyframes swal2-show {
+@-webkit-keyframes swal2-show {
 	0% {
 		-webkit-transform: scale(.7);
 		transform: scale(.7)
