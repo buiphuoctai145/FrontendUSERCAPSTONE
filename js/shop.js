@@ -1,5 +1,3 @@
-
-    /* Bootstrap v3.3.6 (http://getbootstrap.com) */
     if ("undefined" == typeof jQuery) throw new Error("Bootstrap's JavaScript requires jQuery"); + function(a) {
     "use strict";
     var b = a.fn.jquery.split(" ")[0].split(".");
