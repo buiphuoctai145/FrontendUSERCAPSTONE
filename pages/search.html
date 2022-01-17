@@ -71,9 +71,46 @@ for (var attr in meta) {
 window.HaravanAnalytics.AutoTrack = true;
 </script>
 
-	<style type="text/css" data-styled-components="FiaaB gTcftA caPIRE" data-styled-components-is-local="true">
-    
-    </style>
+<style>
+	/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  transition: 0.3s;
+  font-size: 17px;
+  width: 50%;
+  font-weight: 800 
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
     </head>
 	<body id="lama-theme" class="index" style="" data-new-gr-c-s-check-loaded="14.1041.0" data-gr-ext-installed="">
 		<svg xmlns="http://www.w3.org/2000/svg" class="hidden">	
@@ -556,7 +593,7 @@ window.HaravanAnalytics.AutoTrack = true;
 																<td class="text-right" id="total-view-cart">0₫</td>
 															</tr>
 															<tr>
-																<td><a href="/pages/cart.html" class="linktocart button dark">Xem giỏ hàng</a></td>
+																<td><a href="/cart.html" class="linktocart button dark">Xem giỏ hàng</a></td>
 																<td><a href="https://delight-shop.myharavan.com/checkout" class="linktocheckout button dark">Thanh toán</a></td>
 															</tr>
 														</tbody>
@@ -755,7 +792,13 @@ window.HaravanAnalytics.AutoTrack = true;
                 </div>
             </div>
         </div>
-        <div class="wrapper-collection-2">
+		<div class="tab">
+			<button class="tablinks" onclick="openTab(event, 'products')">Products</button>
+			<button class="tablinks" onclick="openTab(event, 'shop')">Shop</button>
+		  </div>
+		  <div id="products" class="tabcontent">
+			  <h3 style="margin-bottom: 30px">Sản phẩm cho từ khóa:'<a style="color:red; cursor: pointer;">...</a>'</h3>
+			<div class="wrapper-collection-2">
             <div class="container-fluid">
                 <div class="row">
                     <div class="clearfix content-product-list ">
@@ -810,7 +853,7 @@ window.HaravanAnalytics.AutoTrack = true;
                             <div class="product-block product-resize fixheight" style="height: 87px;">
                                 <div class="product-img ">
                                     <div class="product-sale"><span>50%</span></div>
-                                    <a href="pages/products.html" title="Máy ảnh Panasonic X-T100" class="image-resize ratiobox" style="height: auto;">
+                                    <a href="products.html" title="Máy ảnh Panasonic X-T100" class="image-resize ratiobox" style="height: auto;">
                                         <picture>
                                             <source media="(max-width: 480px)" data-srcset="//product.hstatic.net/1000306140/product/gg_medium.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
                                             <source media="(min-width: 481px) and (max-width: 767px)" data-srcset="//product.hstatic.net/1000306140/product/gg_large.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
@@ -853,152 +896,87 @@ window.HaravanAnalytics.AutoTrack = true;
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6 col-xs-6 pro-loop ">
-                            <div class="product-block product-resize fixheight" style="height: 87px;">
-                                <div class="product-img ">
-                                    <div class="product-sale"><span>50%</span></div>
-                                    <a href="pages/products.html" title="Máy ảnh Panasonic X-T100" class="image-resize ratiobox" style="height: auto;">
-                                        <picture>
-                                            <source media="(max-width: 480px)" data-srcset="//product.hstatic.net/1000306140/product/gg_medium.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-                                            <source media="(min-width: 481px) and (max-width: 767px)" data-srcset="//product.hstatic.net/1000306140/product/gg_large.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-                                            <source media="(min-width: 768px)" data-srcset="//product.hstatic.net/1000306140/product/gg_grande.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-                                            <img class="lazyload img-loop" data-sizes="auto" data-src="//product.hstatic.net/1000306140/product/gg_grande.jpg" data-lowsrc="//product.hstatic.net/1000306140/product/gg_grande.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt=" Máy ảnh Panasonic X-T100 ">
-                                        </picture>
-                                        <picture>
-                                            <source media="(max-width: 480px)" data-srcset="//product.hstatic.net/1000306140/product/sf_medium.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-                                            <source media="(min-width: 481px) and (max-width: 767px)" data-srcset="//product.hstatic.net/1000306140/product/sf_large.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-                                            <source media="(min-width: 768px)" data-srcset="//product.hstatic.net/1000306140/product/sf_grande.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-                                            <img class="img-loop img-hover lazyload" data-src="//product.hstatic.net/1000306140/product/sf_grande.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt=" Máy ảnh Panasonic X-T100 ">
-                                        </picture>
-                                    </a>
-                                    <div class="button-add hidden">
-                                        <button type="submit" title="Buy now" class="action" onclick="buy_now('1031396101')">Mua ngay<i class="fa fa-long-arrow-right"></i></button>
-                                    </div>
-                                    <div class="pro-price-mb">	
-                                        <span class="pro-price">12,300,000₫</span>
-                                        <span class="pro-price-del"><del class="compare-price">12,999,000₫</del></span>
-                                    </div>
-                                </div>
-                                <div class="product-detail clearfix">
-                                    <div class="box-pro-detail">
-                                        <h3 class="pro-name">
-                                            <a href="https://delight-shop.myharavan.com/products/may-anh-panasonic-x-t100" title="Máy ảnh Panasonic X-T100">
-                                            Máy ảnh Panasonic X-T100
-                                            </a>
-                                        </h3>
-                                        <div class="box-pro-prices">
-                                            <p class="pro-price highlight">
-                                                <span>12,300,000₫</span>
-                                                <span class="pro-price-del">
-                                                <del class="compare-price">
-                                                12,999,000₫
-                                                </del>
-                                                </span>	
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-xs-6 pro-loop ">
-                            <div class="product-block product-resize fixheight" style="height: 87px;">
-                                <div class="product-img ">
-                                    <div class="product-sale"><span>50%</span></div>
-                                    <a href="pages/products.html" title="Máy ảnh Panasonic X-T100" class="image-resize ratiobox" style="height: auto;">
-                                        <picture>
-                                            <source media="(max-width: 480px)" data-srcset="//product.hstatic.net/1000306140/product/gg_medium.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-                                            <source media="(min-width: 481px) and (max-width: 767px)" data-srcset="//product.hstatic.net/1000306140/product/gg_large.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-                                            <source media="(min-width: 768px)" data-srcset="//product.hstatic.net/1000306140/product/gg_grande.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-                                            <img class="lazyload img-loop" data-sizes="auto" data-src="//product.hstatic.net/1000306140/product/gg_grande.jpg" data-lowsrc="//product.hstatic.net/1000306140/product/gg_grande.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt=" Máy ảnh Panasonic X-T100 ">
-                                        </picture>
-                                        <picture>
-                                            <source media="(max-width: 480px)" data-srcset="//product.hstatic.net/1000306140/product/sf_medium.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-                                            <source media="(min-width: 481px) and (max-width: 767px)" data-srcset="//product.hstatic.net/1000306140/product/sf_large.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-                                            <source media="(min-width: 768px)" data-srcset="//product.hstatic.net/1000306140/product/sf_grande.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-                                            <img class="img-loop img-hover lazyload" data-src="//product.hstatic.net/1000306140/product/sf_grande.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt=" Máy ảnh Panasonic X-T100 ">
-                                        </picture>
-                                    </a>
-                                    <div class="button-add hidden">
-                                        <button type="submit" title="Buy now" class="action" onclick="buy_now('1031396101')">Mua ngay<i class="fa fa-long-arrow-right"></i></button>
-                                    </div>
-                                    <div class="pro-price-mb">	
-                                        <span class="pro-price">12,300,000₫</span>
-                                        <span class="pro-price-del"><del class="compare-price">12,999,000₫</del></span>
-                                    </div>
-                                </div>
-                                <div class="product-detail clearfix">
-                                    <div class="box-pro-detail">
-                                        <h3 class="pro-name">
-                                            <a href="https://delight-shop.myharavan.com/products/may-anh-panasonic-x-t100" title="Máy ảnh Panasonic X-T100">
-                                            Máy ảnh Panasonic X-T100
-                                            </a>
-                                        </h3>
-                                        <div class="box-pro-prices">
-                                            <p class="pro-price highlight">
-                                                <span>12,300,000₫</span>
-                                                <span class="pro-price-del">
-                                                <del class="compare-price">
-                                                12,999,000₫
-                                                </del>
-                                                </span>	
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 col-xs-6 pro-loop ">
-                            <div class="product-block product-resize fixheight" style="height: 87px;">
-                                <div class="product-img ">
-                                    <div class="product-sale"><span>50%</span></div>
-                                    <a href="pages/products.html" title="Máy ảnh Panasonic X-T100" class="image-resize ratiobox" style="height: auto;">
-                                        <picture>
-                                            <source media="(max-width: 480px)" data-srcset="//product.hstatic.net/1000306140/product/gg_medium.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-                                            <source media="(min-width: 481px) and (max-width: 767px)" data-srcset="//product.hstatic.net/1000306140/product/gg_large.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-                                            <source media="(min-width: 768px)" data-srcset="//product.hstatic.net/1000306140/product/gg_grande.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-                                            <img class="lazyload img-loop" data-sizes="auto" data-src="//product.hstatic.net/1000306140/product/gg_grande.jpg" data-lowsrc="//product.hstatic.net/1000306140/product/gg_grande.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt=" Máy ảnh Panasonic X-T100 ">
-                                        </picture>
-                                        <picture>
-                                            <source media="(max-width: 480px)" data-srcset="//product.hstatic.net/1000306140/product/sf_medium.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-                                            <source media="(min-width: 481px) and (max-width: 767px)" data-srcset="//product.hstatic.net/1000306140/product/sf_large.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-                                            <source media="(min-width: 768px)" data-srcset="//product.hstatic.net/1000306140/product/sf_grande.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
-                                            <img class="img-loop img-hover lazyload" data-src="//product.hstatic.net/1000306140/product/sf_grande.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt=" Máy ảnh Panasonic X-T100 ">
-                                        </picture>
-                                    </a>
-                                    <div class="button-add hidden">
-                                        <button type="submit" title="Buy now" class="action" onclick="buy_now('1031396101')">Mua ngay<i class="fa fa-long-arrow-right"></i></button>
-                                    </div>
-                                    <div class="pro-price-mb">	
-                                        <span class="pro-price">12,300,000₫</span>
-                                        <span class="pro-price-del"><del class="compare-price">12,999,000₫</del></span>
-                                    </div>
-                                </div>
-                                <div class="product-detail clearfix">
-                                    <div class="box-pro-detail">
-                                        <h3 class="pro-name">
-                                            <a href="https://delight-shop.myharavan.com/products/may-anh-panasonic-x-t100" title="Máy ảnh Panasonic X-T100">
-                                            Máy ảnh Panasonic X-T100
-                                            </a>
-                                        </h3>
-                                        <div class="box-pro-prices">
-                                            <p class="pro-price highlight">
-                                                <span>12,300,000₫</span>
-                                                <span class="pro-price-del">
-                                                <del class="compare-price">
-                                                12,999,000₫
-                                                </del>
-                                                </span>	
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
+  
                     </div>
                 </div>
             </div>
-        </div>
+        	</div>
+		  </div>
+		  
+		  <div id="shop" class="tabcontent">
+			<h3 style="margin-bottom: 30px">Cửa hàng cho từ khóa:'<a style="color:red; cursor: pointer;">...</a>' </h3>
+			<div class="wrapper-collection-2">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="clearfix content-product-list ">
+							<div class="col-md-4 col-sm-6 col-xs-6 pro-loop ">
+								<div class="product-block product-resize fixheight" style="height: 87px;">
+									<div class="product-img ">
+										<a href="shop.html" title="" class="image-resize ratiobox" style="height: auto;">
+											<picture>
+												<source media="(max-width: 480px)" data-srcset="" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+												<source media="(min-width: 481px) and (max-width: 767px)" data-srcset="//product.hstatic.net/1000306140/product/gg_large.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+												<source media="(min-width: 768px)" data-srcset="https://limitdeal.vn/wp-content/uploads/2021/01/swoosh-logo-black.jpeg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+												<img class="lazyload img-loop" data-sizes="auto" data-src="" data-lowsrc="//product.hstatic.net/1000306140/product/gg_grande.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt=" Máy ảnh Panasonic X-T100 ">
+											</picture>
+											<picture>
+												<source media="(max-width: 480px)" data-srcset="//product.hstatic.net/1000306140/product/sf_medium.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+												<source media="(min-width: 481px) and (max-width: 767px)" data-srcset="//product.hstatic.net/1000306140/product/sf_large.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+												<source media="(min-width: 768px)" data-srcset="https://cdn.imgbin.com/25/11/23/imgbin-nike-logo-material-9Yj9WXNr2Ca0Y16C5tF6XgzmX.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+												<img class="img-loop img-hover lazyload" data-src="//product.hstatic.net/1000306140/product/sf_grande.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt=" Máy ảnh Panasonic X-T100 ">
+											</picture>
+										</a>
+									</div>
+									<div class="product-detail clearfix">
+										<div class="box-pro-detail">
+											<h3 class="pro-name">
+												<a href="" title="">
+												Laiiiii kì
+												</a>
+											</h3>
+											<p>Úm bala alaba trap
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-6 col-xs-6 pro-loop ">
+								<div class="product-block product-resize fixheight" style="height: 87px;">
+									<div class="product-img ">
+										<a href="shop.html" title="" class="image-resize ratiobox" style="height: auto;">
+											<picture>
+												<source media="(max-width: 480px)" data-srcset="" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+												<source media="(min-width: 481px) and (max-width: 767px)" data-srcset="//product.hstatic.net/1000306140/product/gg_large.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+												<source media="(min-width: 768px)" data-srcset="https://icolor.vn/wp-content/uploads/2021/08/logo-3-thanh-0619.png" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+												<img class="lazyload img-loop" data-sizes="auto" data-src="" data-lowsrc="//product.hstatic.net/1000306140/product/gg_grande.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="">
+											</picture>
+											<picture>
+												<source media="(max-width: 480px)" data-srcset="//product.hstatic.net/1000306140/product/sf_medium.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+												<source media="(min-width: 481px) and (max-width: 767px)" data-srcset="//product.hstatic.net/1000306140/product/sf_large.jpg" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+												<source media="(min-width: 768px)" data-srcset="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKbwN65aMHO_oYTA7PwuyrpOEayyjP6DUdOc3a9tFdcdrDQl8XB8RV7kVGMjrzhN_DjaQ&usqp=CAU" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=">
+												<img class="img-loop img-hover lazyload" data-src="//product.hstatic.net/1000306140/product/sf_grande.jpg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="">
+											</picture>
+										</a>
+									</div>
+									<div class="product-detail clearfix">
+										<div class="box-pro-detail">
+											<h3 class="pro-name">
+												<a href="" title="">
+												Laiiiii kì
+												</a>
+											</h3>
+											<p>Úm bala alaba trap
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div> 
+		  </div>
+
     </section>
 
 </main>
@@ -1264,7 +1242,21 @@ window.HaravanAnalytics.AutoTrack = true;
 		</div>  		
 <script src="../js/option_selection.js" type="text/javascript"></script>
 <script src="../js/api.jquery.js" type="text/javascript"></script>
-
+<script>
+	function openTab(evt, tabs) {
+	  var i, tabcontent, tablinks;
+	  tabcontent = document.getElementsByClassName("tabcontent");
+	  for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	  }
+	  tablinks = document.getElementsByClassName("tablinks");
+	  for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" active", "");
+	  }
+	  document.getElementById(tabs).style.display = "block";
+	  evt.currentTarget.className += " active";
+	}
+	</script>
 <script>
 	/* imagesloaded */
 	!function(t,e){"function"==typeof define&&define.amd?define("ev-emitter/ev-emitter",e):"object"==typeof module&&module.exports?module.exports=e():t.EvEmitter=e()}("undefined"!=typeof window?window:this,function(){function t(){}var e=t.prototype;return e.on=function(t,e){if(t&&e){var i=this._events=this._events||{},n=i[t]=i[t]||[];return-1==n.indexOf(e)&&n.push(e),this}},e.once=function(t,e){if(t&&e){this.on(t,e);var i=this._onceEvents=this._onceEvents||{},n=i[t]=i[t]||{};return n[e]=!0,this}},e.off=function(t,e){var i=this._events&&this._events[t];if(i&&i.length){var n=i.indexOf(e);return-1!=n&&i.splice(n,1),this}},e.emitEvent=function(t,e){var i=this._events&&this._events[t];if(i&&i.length){var n=0,o=i[n];e=e||[];for(var r=this._onceEvents&&this._onceEvents[t];o;){var s=r&&r[o];s&&(this.off(t,o),delete r[o]),o.apply(this,e),n+=s?0:1,o=i[n]}return this}},t}),function(t,e){"use strict";"function"==typeof define&&define.amd?define(["ev-emitter/ev-emitter"],function(i){return e(t,i)}):"object"==typeof module&&module.exports?module.exports=e(t,require("ev-emitter")):t.imagesLoaded=e(t,t.EvEmitter)}("undefined"!=typeof window?window:this,function(t,e){function i(t,e){for(var i in e)t[i]=e[i];return t}function n(t){var e=[];if(Array.isArray(t))e=t;else if("number"==typeof t.length)for(var i=0;i<t.length;i++)e.push(t[i]);else e.push(t);return e}function o(t,e,r){return this instanceof o?("string"==typeof t&&(t=document.querySelectorAll(t)),this.elements=n(t),this.options=i({},this.options),"function"==typeof e?r=e:i(this.options,e),r&&this.on("always",r),this.getImages(),h&&(this.jqDeferred=new h.Deferred),void setTimeout(function(){this.check()}.bind(this))):new o(t,e,r)}function r(t){this.img=t}function s(t,e){this.url=t,this.element=e,this.img=new Image}var h=t.jQuery,a=t.console;o.prototype=Object.create(e.prototype),o.prototype.options={},o.prototype.getImages=function(){this.images=[],this.elements.forEach(this.addElementImages,this)},o.prototype.addElementImages=function(t){"IMG"==t.nodeName&&this.addImage(t),this.options.background===!0&&this.addElementBackgroundImages(t);var e=t.nodeType;if(e&&d[e]){for(var i=t.querySelectorAll("img"),n=0;n<i.length;n++){var o=i[n];this.addImage(o)}if("string"==typeof this.options.background){var r=t.querySelectorAll(this.options.background);for(n=0;n<r.length;n++){var s=r[n];this.addElementBackgroundImages(s)}}}};var d={1:!0,9:!0,11:!0};return o.prototype.addElementBackgroundImages=function(t){var e=getComputedStyle(t);if(e)for(var i=/url\((['"])?(.*?)\1\)/gi,n=i.exec(e.backgroundImage);null!==n;){var o=n&&n[2];o&&this.addBackground(o,t),n=i.exec(e.backgroundImage)}},o.prototype.addImage=function(t){var e=new r(t);this.images.push(e)},o.prototype.addBackground=function(t,e){var i=new s(t,e);this.images.push(i)},o.prototype.check=function(){function t(t,i,n){setTimeout(function(){e.progress(t,i,n)})}var e=this;return this.progressedCount=0,this.hasAnyBroken=!1,this.images.length?void this.images.forEach(function(e){e.once("progress",t),e.check()}):void this.complete()},o.prototype.progress=function(t,e,i){this.progressedCount++,this.hasAnyBroken=this.hasAnyBroken||!t.isLoaded,this.emitEvent("progress",[this,t,e]),this.jqDeferred&&this.jqDeferred.notify&&this.jqDeferred.notify(this,t),this.progressedCount==this.images.length&&this.complete(),this.options.debug&&a&&a.log("progress: "+i,t,e)},o.prototype.complete=function(){var t=this.hasAnyBroken?"fail":"done";if(this.isComplete=!0,this.emitEvent(t,[this]),this.emitEvent("always",[this]),this.jqDeferred){var e=this.hasAnyBroken?"reject":"resolve";this.jqDeferred[e](this)}},r.prototype=Object.create(e.prototype),r.prototype.check=function(){var t=this.getIsImageComplete();return t?void this.confirm(0!==this.img.naturalWidth,"naturalWidth"):(this.proxyImage=new Image,this.proxyImage.addEventListener("load",this),this.proxyImage.addEventListener("error",this),this.img.addEventListener("load",this),this.img.addEventListener("error",this),void(this.proxyImage.src=this.img.src))},r.prototype.getIsImageComplete=function(){return this.img.complete&&void 0!==this.img.naturalWidth},r.prototype.confirm=function(t,e){this.isLoaded=t,this.emitEvent("progress",[this,this.img,e])},r.prototype.handleEvent=function(t){var e="on"+t.type;this[e]&&this[e](t)},r.prototype.onload=function(){this.confirm(!0,"onload"),this.unbindEvents()},r.prototype.onerror=function(){this.confirm(!1,"onerror"),this.unbindEvents()},r.prototype.unbindEvents=function(){this.proxyImage.removeEventListener("load",this),this.proxyImage.removeEventListener("error",this),this.img.removeEventListener("load",this),this.img.removeEventListener("error",this)},s.prototype=Object.create(r.prototype),s.prototype.check=function(){this.img.addEventListener("load",this),this.img.addEventListener("error",this),this.img.src=this.url;var t=this.getIsImageComplete();t&&(this.confirm(0!==this.img.naturalWidth,"naturalWidth"),this.unbindEvents())},s.prototype.unbindEvents=function(){this.img.removeEventListener("load",this),this.img.removeEventListener("error",this)},s.prototype.confirm=function(t,e){this.isLoaded=t,this.emitEvent("progress",[this,this.element,e])},o.makeJQueryPlugin=function(e){e=e||t.jQuery,e&&(h=e,h.fn.imagesLoaded=function(t,e){var i=new o(this,t,e);return i.jqDeferred.promise(h(this))})},o.makeJQueryPlugin(),o});
